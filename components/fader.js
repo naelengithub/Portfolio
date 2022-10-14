@@ -1,20 +1,21 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import styles from "./fader.module.css";
 
 export default function Fader({ text }) {
   const [fadeProp, setFadeProp] = useState({
-    fade: "fade-in",
+    fade: true,
   });
 
   useEffect(() => {
     const timeout = setInterval(() => {
-      if (fadeProp.fade === "fade-in") {
+      if (fadeProp.fade === true) {
         setFadeProp({
-          fade: "fade-out",
+          fade: false,
         });
       } else {
         setFadeProp({
-          fade: "fade-in",
+          fade: true,
         });
       }
     }, 4000);
@@ -22,8 +23,8 @@ export default function Fader({ text }) {
   }, [fadeProp]);
 
   return (
-    <div>
-      <h1 className={fadeProp.fade}>{text}</h1>
+    <div className={fadeProp.fade ? styles.fadeOut : styles.fadeIn}>
+      <h1>{text}</h1>
     </div>
   );
 }
