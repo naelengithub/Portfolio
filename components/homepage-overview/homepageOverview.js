@@ -1,5 +1,6 @@
 import styles from "./homepageOverview.module.css";
-import Fader from "../fader";
+// import Fader from "../fader";
+// import ComicImage1 from "../../public/images/comicImage1.jpg";
 
 export default function HomepageOverview() {
   return (
@@ -9,13 +10,13 @@ export default function HomepageOverview() {
         <h2 className={styles.h2}>Im Eli</h2>
       </div>
       <div className={styles.grid}>
-        <div className={styles.one}>
-          <Fader text="Hopefully I'm a fade in/out component." />
+        <div className={styles.one}></div>
+        <div className={styles.two}></div>
+        <div className={styles.three}></div>
+        <div className={styles.four}></div>
+        <div className={styles.five}>
+          <div></div>
         </div>
-        <div className={styles.two}>Two</div>
-        <div className={styles.three}>Three</div>
-        <div className={styles.four}>Four</div>
-        <div className={styles.five}>Five</div>
       </div>
     </div>
   );

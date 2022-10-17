@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import styles from "./fader.module.css";
+import Image from "next/image";
 
-export default function Fader({ text }) {
+export default function Fader({ src }) {
   const [fadeProp, setFadeProp] = useState({
     fade: true,
   });
@@ -18,13 +19,19 @@ export default function Fader({ text }) {
           fade: true,
         });
       }
-    }, 4000);
+    }, 3000);
     return () => clearInterval(timeout);
   }, [fadeProp]);
 
   return (
     <div className={fadeProp.fade ? styles.fadeOut : styles.fadeIn}>
-      <h1>{text}</h1>
+      {/* <Image
+        src={src}
+        width={width}
+        height={height}
+        alt={alt}
+        className={styles.image}
+      /> */}
     </div>
   );
 }
