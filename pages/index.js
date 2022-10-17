@@ -15,9 +15,6 @@ export default function Home() {
       <main className={styles.main}>
         <HomepageOverview />
       </main>
-      <div>
-        <Fader text="Hopefully I'm a fade in/out component." />
-      </div>
       <footer className={styles.footer}>
         <h2>I am the footer.</h2>
       </footer>
